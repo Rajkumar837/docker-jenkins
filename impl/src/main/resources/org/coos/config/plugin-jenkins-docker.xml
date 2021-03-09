@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins xmlns="http://www.coos.org/PluginXMLSchema">
+
+  <plugin name="${name:-jenkins-docker}" channel="ch1"
+    class="com/javatech.impl.jenkins-dockerEndpoint">
+    <property name="lcmRegEnabled" value="${lcmRegEnabled:-false}" />
+    <property name="lcmRegRequired" value="${lcmRegRequired:-false}" />
+    <property name="lcmPollingInterval" value="${lcmPollingInterval:-60000}" />
+    <property name="coosEndpointTimeout" value="${coosEndpointTimeout:-10000}" />
+    <property name="coosEndpointMaxPoolSize" value="${coosEndpointMaxPoolSize:-3}" />
+  </plugin>
+
+  <channel name="ch1" protocol="coos"
+    class="org.coos.messaging.plugin.PluginChannel">
+    <inBound>
+      <filter processor="logger" />
+    </inBound>
+    <outBound>
+      <filter processor="logger" />
+    </outBound>
+  </channel>
+
+  <processor name="logger" class="org.coos.messaging.processor.Logger" />
+
+</plugins>

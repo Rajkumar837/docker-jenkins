@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>jenkins-docker</artifactId>
+    <groupId>com/javatech</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com/javatech</groupId>
+  <artifactId>jenkins-docker-api</artifactId>
+  <name>jenkins-docker-api</name>
+
+  <properties>
+    <bundle.symbolicName>com/javatech.api</bundle.symbolicName>
+    <bundle.namespace>com/javatech.api</bundle.namespace>
+  </properties>
+
+  <packaging>bundle</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.coosproject.messaging</groupId>
+      <artifactId>messaging-lib</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.coosproject.api</groupId>
+      <artifactId>coos-api</artifactId>
+    </dependency>
+  </dependencies>
+</project>
