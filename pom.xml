@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
       
   
-  <groupId>com/javatech</groupId>
+  <groupId>com-javatech</groupId>
       
   
   <artifactId>jenkins-docker</artifactId>
